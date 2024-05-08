@@ -12,7 +12,7 @@ Authorization checks are implemented to prevent unauthorized score manipulation.
 
 # Create a diagram to illustrate the flow of execution. 
 
-![Logo](https://drive.google.com/file/d/1JvvOSU6SzI188uaGftgpWFnw28fSgchQ/view?usp=sharing)
+![Logo](./ExecutionFlow.png)
 
 ## Flow of Execution:
 1. **Client Action**: A user performs an action on the website that results in a score increase.
