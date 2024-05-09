@@ -14,16 +14,13 @@ dotenv.config({ path: path.join(rootDir, envPath) });
 const app: Application = express();
 const port = process.env.PORT || 3000;
 
-console.log(path.join(rootDir, envPath))
-console.log(process.env.MONGODB_URI);
-
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use('/api/v1', productRoutes);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://mongodb:27017')
+mongoose.connect(process.env.MONGO_URI || 'mongodb://mongodb:27017')
   .then(() => {
     console.log('Connected to database');
     app.listen(port, () => {
